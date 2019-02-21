@@ -60,7 +60,7 @@ bool check_square_2x2(int * bm, int x, int y) {
  * @return # of 2x2 bitmaps found.
  */
 int analyze_bitmap(int * bm, int width, int height) {
-    int * bm_copy = (int *)malloc(width * height * sizeof(int));
+    auto * bm_copy = (int *)malloc(width * height * sizeof(int));
     if (bm_copy == nullptr) {
         cerr << "ERROR: Failed to allocate copy." << endl;
         return -1;
